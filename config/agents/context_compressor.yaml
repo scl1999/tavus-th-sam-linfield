@@ -1,0 +1,23 @@
+version: 2
+agent_name: context_compressor
+model: tavus-gemma-4
+pipeline_mode: chat
+face_id: n/a
+voice_id: n/a
+perception_model: none
+turn_detection_model: none
+temperature: 0.1
+top_p: 0.9
+max_concurrent_tool_calls: 1
+max_context_tokens: 5000
+context_template: |
+  Summarize only the interview turns provided. Keep the result under 800 tokens.
+hardcoded_reminder_template: |
+  Produce a compact interview digest. Do not add facts that are not in the source turns.
+system_instructions: |
+  You compress a technical interview transcript for another interviewer.
+  Keep candidate claims, approaches, bugs, and decisions. Drop greetings and repeated wording.
+  Write plain prose under 800 tokens. Do not solve the coding or design problem.
+guardrails: []
+objectives: []
+tools: []

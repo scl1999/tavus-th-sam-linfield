@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.local_secrets/
+.env
+.env.*
+!.env.example
+dist/
+build/
+*.egg-info/
+playwright-report/
+test-results/
+.playwright/
+documentation/
+ui-design-inspiration/
+/Autonomous Technical Interviewing for Deloitte (1).pdf
+/Autonomous Technical Interviewing for Deloitte.pptx
+/prompts.txt
+/screenshots/
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+.postgres-data/
+recordings/
+frontend/node_modules/
+frontend/dist/

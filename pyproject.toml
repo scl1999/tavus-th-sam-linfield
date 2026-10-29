@@ -1,0 +1,25 @@
+[tool.pytest.ini_options]
+pythonpath = ["src", "scripts", "."]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.12"
+packages = ["tavus_cvi"]
+mypy_path = "src"
+strict = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["yaml", "tiktoken"]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests", "scripts"]
+extend-exclude = [
+  "scripts/scrape_tavus_api_docs.py",
+  "tests/test_scrape_tavus_api_docs.py",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
